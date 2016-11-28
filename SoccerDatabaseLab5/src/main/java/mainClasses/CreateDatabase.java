@@ -17,7 +17,7 @@ import java.sql.Statement;
 public class CreateDatabase {
 
 	public static void main(String[] args) {
-		final String DB_URL = "jdbc:hsqldb:file:SoccerDB/Soccer";	//create database
+		final String DB_URL = "jdbc:hsqldb:file:SoccerDB/Soccer";
 		
 		try {
 			Connection conn = DriverManager.getConnection(DB_URL);	//connect to database
