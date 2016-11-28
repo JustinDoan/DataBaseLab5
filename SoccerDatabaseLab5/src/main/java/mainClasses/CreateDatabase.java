@@ -61,17 +61,17 @@ public class CreateDatabase {
 			
 			//pre-pop with 5 different games
 			
-			String stmtString = "INSERT INTO SoccerMatches VALUES ('North American Soccer League','CAROLINA RAILHAWKS','MINNESOTA UNITED FC',2,1,4,2,2016)";
+			String stmtString = "INSERT INTO SoccerMatches VALUES ('NORTH AMERICAN SOCCER LEAGUE','CAROLINA RAILHAWKS','MINNESOTA UNITED FC',2,1,4,2,2016)";
 			
 			
 			stmt.executeUpdate(stmtString);		
-			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'North American Soccer League', " + "'FORT LAUDERDALE STRIKERS', " + "'MIAMI FC', " + "1, "
+			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'NORTH AMERICAN SOCCER LEAGUE', " + "'FORT LAUDERDALE STRIKERS', " + "'MIAMI FC', " + "1, "
 					+ "1," + "4," + "2," + "2016 " + ")");
-			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'North American Soccer League', " + "'TAMPA BAY ROWDIES', " + "'INDY ELEVEN', " + "0, "
+			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'NORTH AMERICAN SOCCER LEAGUE', " + "'TAMPA BAY ROWDIES', " + "'INDY ELEVEN', " + "0, "
 					+ "0," + "4," + "2," + "2016 " + ")");
-			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'North American Soccer League', " + "'RAYO OKC', " + "'FC EDMONTON', " + "0, "
+			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'NORTH AMERICAN SOCCER LEAGUE', " + "'RAYO OKC', " + "'FC EDMONTON', " + "0, "
 					+ "0," + "4," + "2," + "2016 " + ")");
-			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'North American Soccer League', " + "'NEW YORK COSMOS', " + "'OTTAWA FURY FC', " + "3, "
+			stmt.execute("INSERT INTO SoccerMatches VALUES ( " + "'NORTH AMERICAN SOCCER LEAGUE', " + "'NEW YORK COSMOS', " + "'OTTAWA FURY FC', " + "3, "
 					+ "0," + "4," + "3," + "2016 " + ")");
 			
 			

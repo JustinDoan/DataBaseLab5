@@ -25,6 +25,7 @@ public class Main
     	Scanner keyboard = new Scanner(System.in);
     	
     	while(true){
+    		System.out.println("\n\n\n");
     		System.out.println("Soccer Database");
     		System.out.println("--------------------------");
     		System.out.println("1. Reset Database");
@@ -34,7 +35,13 @@ public class Main
     		System.out.println("4. Search for a Match");
     		System.out.println("5. Exit the Program");
     		System.out.println("Enter your selection: ");
-    		int selection = keyboard.nextInt();
+    		int selection;
+			try {
+				selection = keyboard.nextInt();
+			} catch (Exception e) {
+				System.out.println("Please enter in a number (1,2,3,4,5)");
+				selection = 0;
+			}
     		
     		
     		
@@ -80,6 +87,11 @@ public class Main
 	    		    	while(result.next()){
 	    		    		System.out.println(result.getString("SoccerLeague") + "\n The Date was: " + result.getInt("Day")+ "/" + result.getInt("Month") + "/" + result.getInt("Year") + "\n The Home Team: " +result.getString("HomeTeam") +"\n The Away Team: " + result.getString("AwayTeam") + "\n The Score was: "
 	    		    				+ result.getInt("HomeScore") + " - " + result.getInt("AwayScore"));
+	    		    		conn.close();
+		    		    	break;
+	    		    	}
+	    		    	if (!result.next() ) {
+	    		    	    System.out.println("There are no matches under those conditions");
 	    		    	}
 	    		    	
 	    		    	conn.close();
@@ -88,6 +100,7 @@ public class Main
     			case 5:{System.exit(0);}
     			default: {
     				System.out.println("That was not a valid choice. Please Try Again");
+    				keyboard.nextLine();
     				break;
     				
     			}
